@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reindeers on the loose</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jaldi:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="screen">
+        <div id="game">
+            <div id="game_background"></div>
+            <div id="game_elements">
+
+                <div id="rensdyr_container1" class="">
+                    <div id="rensdyr_sprite1"></div>
+                </div>
+
+                <div id="rensdyr_container2" class="">
+                    <div id="rensdyr_sprite2"></div>
+                </div>
+
+                <div id="rudolph_container1" class="">
+                    <div id="rudolph_sprite1"></div>
+                </div>
+
+                <div id="alf_container1" class="">
+                    <div id="alf_sprite1"></div>
+                </div>
+
+                <div id="alf_container2" class="">
+                    <div id="alf_sprite2"></div>
+                </div>
+            </div>
+            <div id="game_foreground"></div>
+            <div id="gameiu">
+                <div id="score_board">
+                    <div id="point_container"></div>
+                </div>
+                <div id="energy_board">
+                    <div id="liv">
+                        <div id="heart1" class="heart"></div>
+                        <div id="heart2" class="heart"></div>
+                        <div id="heart3" class="heart"></div>
+                    </div>
+                </div>
+                <div id="time_board">
+                    <div id="urskive"></div>
+                    <div id="minut_viser" class=""></div>
+                    <div id="time_viser" class=""></div>
+                </div>
+            </div>
+        </div>
+        <div id="start">
+            <div id="start_knap"></div>
+            <div id="eyes"></div>
+        </div>
+        <div id="info_skaerm">
+            <div id="info_skaerm_start_knap"></div>
+        </div>
+        <div id="game_over">
+            <div id="genstart_knap_game_over"></div>
+            <div id="game_over_alf"></div>
+            <div id="tears_right"></div>
+            <div id="tears_right2"></div>
+            <div id="tears_left"></div>
+            <div id="tears_left2"></div>
+        </div>
+        <div id="level_complete">
+            <div id="genstart_knap_level_complete"></div>
+            <div id="score">0</div>
+            <div id="julemandenskane"></div>
+        </div>
+    </div>
+
+    <audio id="lyd_rensdyr" src="lyd/lyd10_01.mp3"></audio>
+    <audio id="lyd_alf" src="lyd/lyd1_01.mp3"></audio>
+    <audio id="lyd_startgame" src="lyd/startgmae2.mp3" loop></audio>
+    <audio id="lyd_knap" src="lyd/Kliklyd.mp3"></audio>
+    <audio id="vinder_lyd" src="lyd/hohosanta2.mp3"></audio>
+    <audio id="taber_lyd" src="lyd/gameoveralf2.mp3"></audio>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

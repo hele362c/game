@@ -1,0 +1,12 @@
+#spilelementer img {
+    max-width: 30%;
+}
+#uielementer img {
+    max-width: 15%;
+}
+#screens img {
+    max-width: 100%;
+}
+body {
+    background-color: aliceblue;
+}

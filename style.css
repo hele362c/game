@@ -1,0 +1,652 @@
+/*------------------overordnet------------------------*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#screen {
+    position: relative;
+    width: 100vw;
+    height: 56.25vw;
+}
+
+#game {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#game_background {
+    background-image: url(svg/baggrund.svg);
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#game_foreground {
+    background-image: url(svg/forgrund.svg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+#game_elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#start {
+    background-image: url(svg/startside2.svg);
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#start_knap {
+    background-image: url(svg/readytoplay.svg);
+    background-size: cover;
+    position: absolute;
+    width: 14vw;
+    height: 5vw;
+    top: 27.9vw;
+    left: 43.6vw;
+}
+
+#eyes {
+    position: absolute;
+    background-image: url(svg/eye.svg);
+    background-size: cover;
+    width: 6vw;
+    height: 2.2vw;
+    top: 25vw;
+    left: 19vw;
+}
+
+#game_over {
+    background-image: url(svg/gameover1.svg);
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#genstart_knap_game_over {
+    position: absolute;
+    width: 5vw;
+    height: 5vw;
+    top: 24vw;
+    left: 48.5vw;
+    background-image: url(svg/replayknap.svg);
+    background-size: cover;
+}
+
+#game_over_alf {
+    position: absolute;
+    background-image: url(svg/gameoveralt.svg);
+    background-size: cover;
+    width: 16.1vw;
+    height: 17.5vw;
+    top: 21.3vw;
+    left: 77vw;
+}
+
+#tears_right {
+    position: absolute;
+    background-image: url(svg/tears_right.svg);
+    background-size: cover;
+    width: 1vw;
+    height: 1.5vw;
+    top: 26.5vw;
+    left: 27.6vw;
+}
+
+#tears_right2 {
+    position: absolute;
+    background-image: url(svg/tears_right.svg);
+    background-size: cover;
+    width: 1vw;
+    height: 1.5vw;
+    top: 26.9vw;
+    left: 27.3vw;
+}
+
+#tears_left {
+    position: absolute;
+    background-image: url(svg/tears_left.svg);
+    background-size: cover;
+    width: 1vw;
+    height: 1.5vw;
+    top: 26.5vw;
+    left: 22.6vw;
+}
+
+#tears_left2 {
+    position: absolute;
+    background-image: url(svg/tears_left.svg);
+    background-size: cover;
+    width: 1vw;
+    height: 1.5vw;
+    top: 26.9vw;
+    left: 23vw;
+}
+
+#level_complete {
+    background-image: url(svg/levelcomplete2.svg);
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#genstart_knap_level_complete {
+    position: absolute;
+    width: 5vw;
+    height: 5vw;
+    top: 24.5vw;
+    left: 49.5vw;
+    background-image: url(svg/replayknap.svg);
+    background-size: cover;
+}
+
+#score {
+    position: absolute;
+    top: 11.5vw;
+    left: 54.4vw;
+    font-size: 1.9vw;
+    font-weight: bolder;
+    color: lightgrey;
+    font-family: 'Comfortaa', cursive;
+
+}
+
+#julemandenskane {
+    position: absolute;
+    background-image: url(svg/santareinder.svg);
+    background-size: cover;
+    width: 86vw;
+    height: 28.8vw;
+    top: 24vw;
+    left: 1vw;
+}
+
+#info_skaerm {
+    background-image: url(svg/Artboard%20346.svg);
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#info_skaerm_start_knap {
+    position: absolute;
+    width: 5vw;
+    height: 5vw;
+    top: 28.5vw;
+    left: 48.5vw;
+    background-image: url(svg/playknap.svg);
+    background-size: cover;
+}
+
+.hide {
+    display: none;
+}
+
+/**************** effekter ****************/
+
+.hide {
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
+}
+
+/*--------------------Animation--------------------*/
+.shake {
+    animation-name: shake_kf;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    transform-origin: 50% 0%;
+}
+
+@keyframes shake_kf {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(20deg);
+    }
+
+    40% {
+        transform: rotate(-20deg);
+    }
+
+    60% {
+        transform: rotate(20deg);
+    }
+
+    80% {
+        transform: rotate(-20deg);
+    }
+
+    100% {
+        transform: rotate(20deg) scale(0);
+    }
+}
+
+
+.up {
+    animation-name: up_kf;
+    animation-duration: 2.6s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes up_kf {
+    0% {
+        transform: translateY(0) scale(0);
+    }
+
+    50% {
+        transform: translateY(-9vw);
+    }
+
+    100% {
+        transform: translateY(0) scale(0);
+    }
+}
+
+.forsvind {
+    animation-name: forsvind_kf;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(.59, -0.56, .77, 1.34);
+    animation-fill-mode: forwards;
+    transform-origin: 50% 0%;
+}
+
+@keyframes forsvind_kf {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+.uranimation {
+    animation-name: uranimation_kf;
+    animation-duration: 20s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes uranimation_kf {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.uranimation2 {
+    animation-name: uranimation2_kf;
+    animation-duration: 20s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+
+}
+
+@keyframes uranimation2_kf {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(30deg);
+    }
+}
+
+.frys {
+    animation-play-state: paused;
+}
+
+.pulse {
+    animation-name: pulse_kf;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pulse_kf {
+    0% {
+        transform: scale(0.95);
+    }
+
+    50% {
+        transform: scale(1)
+    }
+
+    100% {
+        transform: scale(0.95);
+    }
+}
+
+.tabershake {
+    animation-name: tabershake_kf;
+    animation-duration: .9s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    transform-origin: 50% 0%;
+}
+
+@keyframes tabershake_kf {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(3deg);
+    }
+
+    40% {
+        transform: rotate(-3deg);
+    }
+
+    60% {
+        transform: rotate(3deg);
+    }
+
+    80% {
+        transform: rotate(-3deg);
+    }
+
+    100% {
+        transform: rotate(3deg);
+    }
+}
+
+.eyeblink {
+    animation-name: eyeblink_kf;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    transform-origin: 50%;
+
+}
+
+@keyframes eyeblink_kf {
+
+    0%,
+    100% {
+        transform: scale(1, .05);
+    }
+
+    5%,
+    95% {
+        transform: scale(1, 1);
+    }
+}
+
+
+/*---------------------- til levelcomplete--------------------*/
+
+.flyv {
+    animation-name: flyv_kf;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+
+@keyframes flyv_kf {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+.falling {
+    animation-name: falling_kf;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes falling_kf {
+    0% {
+        transform: translateY(0vw)
+    }
+
+    100% {
+        transform: translateY(3vw);
+    }
+}
+
+.delayfall {
+    animation-delay: 0s;
+}
+
+.delayfall2 {
+    animation-delay: -1s;
+}
+
+.delayfall3 {
+    animation-delay: 2.5s;
+}
+
+/*-----------------delay-----------------------------*/
+
+.delay0 {
+    animation-delay: 0s;
+}
+
+.delay1 {
+    animation-delay: 0.25s;
+}
+
+.delay2 {
+    animation-delay: 0.5s;
+}
+
+.delay3 {
+    animation-delay: 0.75s;
+}
+
+.delay4 {
+    animation-delay: 0.10s;
+}
+
+.delay5 {
+    animation-delay: 0.30s;
+}
+
+.delay6 {
+    animation-delay: 0.15s;
+}
+
+.delay7 {
+    animation-delay: 0.45s;
+}
+
+/*--------------------Elementer--------------------*/
+
+#rensdyr_sprite1 {
+    background-image: url(svg/rensdyr.svg);
+    background-size: cover;
+    width: 11vw;
+    height: 15vw;
+}
+
+#rensdyr_sprite2 {
+    background-image: url(svg/rensdyr.svg);
+    background-size: cover;
+    width: 11vw;
+    height: 15vw;
+}
+
+#rudolph_sprite1 {
+    background-image: url(svg/rudolph.svg);
+    background-size: cover;
+    width: 11vw;
+    height: 15vw;
+}
+
+#alf_sprite1 {
+    background-image: url(svg/alf.svg);
+    background-size: cover;
+    width: 11vw;
+    height: 15vw;
+}
+
+#alf_sprite2 {
+    background-image: url(svg/alf.svg);
+    background-size: cover;
+    width: 11vw;
+    height: 15vw;
+}
+
+#rensdyr_container1,
+#rensdyr_container2,
+#rudolph_container1,
+#alf_container1,
+#alf_container2 {
+    position: absolute;
+}
+
+/*---------------------pos---------------------*/
+.pos0 {
+    top: 23vw;
+    left: 32vw;
+}
+
+.pos1 {
+    top: 21vw;
+    left: 0vw;
+}
+
+.pos2 {
+    top: 40vw;
+    left: 87vw;
+}
+
+.pos3 {
+    top: 36vw;
+    left: 12vw;
+}
+
+.pos4 {
+    top: 19vw;
+    left: 85vw;
+}
+
+.pos5 {
+    top: 27vw;
+    left: 69.5vw;
+}
+
+.pos6 {
+    top: 44vw;
+    left: 53vw;
+}
+
+.pos7 {
+    top: 20vw;
+    left: 52vw;
+}
+
+/*-------------------UI elements --------------------*/
+#game_ui {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+#point_container {
+    position: absolute;
+    top: 1.7vw;
+    left: 52.1vw;
+    font-size: 1.9vw;
+    color: black;
+    font-family: 'Lemon', cursive;
+}
+
+.heart {
+    width: 3.6vw;
+    height: 3.3vw;
+    background-image: url(svg/klokkeliv.svg);
+    background-size: cover;
+    margin-right: 0.6vw;
+}
+
+#liv {
+    position: absolute;
+    top: 1.2vw;
+    left: 3vw;
+    display: flex;
+}
+
+.gray {
+    filter: opacity(.1);
+}
+
+#time_board {
+    background-image: url(svg/tid.svg);
+    background-size: cover;
+    position: absolute;
+    width: 8vw;
+    height: 9.3vw;
+    top: 0.3vw;
+    left: 91.5vw;
+}
+
+#time_board {
+    position: absolute;
+    top: 0.6vw;
+    left: 91.4vw;
+}
+
+#urskive {
+    position: absolute;
+    width: 8vw;
+    height: 9.3vw;
+    background-image: url(svg/timer.svg);
+    background-size: cover;
+}
+
+#minut_viser {
+    position: absolute;
+    top: 2.1vw;
+    left: 3.8vw;
+    width: .4vw;
+    height: 3.0vw;
+    transform-origin: 50% 2.9vw;
+    background-color: red;
+    border-radius: 1vw;
+}
+
+#time_viser {
+    position: absolute;
+    top: 3.0vw;
+    left: 3.8vw;
+    width: .4vw;
+    height: 2.1vw;
+    transform-origin: 50% 2.2vw;
+    background-color: red;
+    border-radius: 1vw;
+}
